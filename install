@@ -1,0 +1,9 @@
+#!/bin/bash
+# This script installs my dotfiles and links them to the repo for easy synchronising. It also installs vundle.
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+git clone https://github.com/osirase/dotfiles.git ~/gitRepos
+
+ln -siv ~/gitRepos/dotfiles/vimrc ~/.vimrc
+ln -siv ~/gitRepos/dotfiles/tmux.conf ~/.tmux.conf

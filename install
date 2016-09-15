@@ -6,7 +6,7 @@ sudo dnf groupinstall 'Development Tools'
 sudo dnf groupinstall 'C Development Tools and Libraries'
 
 #My favourite programs and plugins
-sudo dnf install vim tmux gnome-tweak-tool steam blender gimp inkscape arduino calibre latexila transmission nemiver mediainfo openscad freecad wireshark glade3 ghex fritzing anki vlc java-openjdk icedtea-web youtube-dl p7zip p7zip-plugins unrar wine yumex-dnf gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-ugly gstreamer-ffmpeg gstreamer1-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-good-extras gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-good gstreamer1-plugins-base gstreamer1
+sudo dnf install vim tmux gnome-tweak-tool steam blender gimp inkscape arduino calibre latexila transmission nemiver mediainfo mediainfo-gui gnome-nettool gnome-font-viewer redshift logisim openscad freecad wireshark glade3 ghex fritzing anki vlc java-openjdk icedtea-web youtube-dl p7zip p7zip-plugins unrar wine yumex-dnf gstreamer-plugins-bad gstreamer-plugins-bad-free-extras gstreamer-plugins-bad-nonfree gstreamer-plugins-ugly gstreamer-ffmpeg gstreamer1-libav gstreamer1-plugins-bad-free-extras gstreamer1-plugins-bad-freeworld gstreamer1-plugins-base-tools gstreamer1-plugins-good-extras gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-good gstreamer1-plugins-base gstreamer1 kvm virt-manager libvirt libvirt-python
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #git clone https://github.com/osirase/dotfiles.git ~/gitRepos # I don't think this is needed??
@@ -17,3 +17,8 @@ ln -siv ~/gitRepos/dotfiles/tmux.conf ~/.tmux.conf
 
 # Installs Vim Vundle Plugins
 vim +PluginInstall +qall
+
+# Enables periodic trim for SSD
+systemctl enable fstrim.timer
+
+

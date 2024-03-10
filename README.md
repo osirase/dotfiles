@@ -10,7 +10,7 @@ git clone https://github.com/osirase/dotfiles.git $HOME/.config/dotfiles && stow
 ## Software I like
 
 ``` 
-sudo dnf install stow zsh ripgrep tmux fzf emacs
+sudo dnf install stow zsh ripgrep tmux fzf fd-find shellcheck pandoc emacs
 ```
 
 ## Doom emacs

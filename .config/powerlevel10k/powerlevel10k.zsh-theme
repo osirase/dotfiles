@@ -9,14 +9,14 @@
 # Which in turn was forked from Agnoster Theme
 # https://github.com/robbyrussell/oh-my-zsh/blob/74177c5320b2a1b2f8c4c695c05984b57fd7c6ea/themes/agnoster.zsh-theme
 ################################################################
- 
+
 # Temporarily change options.
 'builtin' 'local' '-a' '__p9k_src_opts'
 [[ ! -o 'aliases'         ]] || __p9k_src_opts+=('aliases')
 [[ ! -o 'sh_glob'         ]] || __p9k_src_opts+=('sh_glob')
 [[ ! -o 'no_brace_expand' ]] || __p9k_src_opts+=('no_brace_expand')
 'builtin' 'setopt' 'no_aliases' 'no_sh_glob' 'brace_expand'
- 
+
 (( $+__p9k_root_dir )) || typeset -gr __p9k_root_dir=${POWERLEVEL9K_INSTALLATION_DIR:-${${(%):-%x}:A:h}}
 (( $+__p9k_intro )) || {
   # Leading spaces before `local` are important. Otherwise Antigen will remove `local` (!!!).
@@ -32,9 +32,9 @@
   typeset -gr __p9k_intro_no_reply="$__p9k_intro_base; $__p9k_intro_locale"
   typeset -gr __p9k_intro="$__p9k_intro_no_locale; $__p9k_intro_locale"
 }
- 
+
 zmodload zsh/langinfo
- 
+
 function _p9k_init_locale() {
   if (( ! $+__p9k_locale )); then
     typeset -g __p9k_locale=
@@ -46,7 +46,7 @@ function _p9k_init_locale() {
   fi
   [[ -n $__p9k_locale ]]
 }
- 
+
 () {
   eval "$__p9k_intro"
   if (( $+__p9k_sourced )); then
@@ -76,8 +76,8 @@ function _p9k_init_locale() {
   fi
   builtin source $__p9k_root_dir/internal/p10k.zsh || true
 }
- 
+
 (( $+__p9k_instant_prompt_active )) && unsetopt prompt_cr prompt_sp || setopt prompt_cr prompt_sp
- 
+
 (( ${#__p9k_src_opts} )) && setopt ${__p9k_src_opts[@]}
 'builtin' 'unset' '__p9k_src_opts'

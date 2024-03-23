@@ -1,4 +1,4 @@
-# dotfiles
+# Dotfiles
 My local dotfiles.
 
 ## Installation
@@ -7,13 +7,13 @@ My local dotfiles.
 git clone https://github.com/osirase/dotfiles.git $HOME/.config/dotfiles && stow -t $HOME -d $HOME/.config/dotfiles .
 ```
 
-## Software I like
+## Base Software
 
 ``` 
-sudo dnf install stow zsh ripgrep tmux fzf fd-find shellcheck pandoc emacs
+sudo dnf -y install stow zsh ripgrep tmux fzf fd-find shellcheck pandoc emacs && chsh -s $(which zsh)
 ```
 
-## Doom emacs
+## Doom Emacs
 
 ```
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs

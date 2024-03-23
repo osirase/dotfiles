@@ -17,6 +17,6 @@ sudo dnf -y install stow zsh ripgrep tmux fzf fd-find shellcheck pandoc emacs &&
 
 ```
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-~/.config/emacs/bin/doom install
+~/.config/emacs/bin/doom install && export PATH="$PATH:$HOME/.config/emacs/bin/"
 ```
 

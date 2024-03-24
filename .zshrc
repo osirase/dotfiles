@@ -46,22 +46,21 @@ source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 
-# Check if tmux is installed
-if command -v tmux &> /dev/null; then
-    # Check if already in a tmux session
-    if [ -n "$TMUX" ]; then
-      :
-    else
-        # Search for a tmux session named '1'
-        if tmux has-session -t 1 &> /dev/null; then
-            # If session exists, attach to it
-            tmux attach -t 1
-        else
-            # If session doesn't exist, create it and attach
-            tmux new-session -s 1 -d
-            tmux attach -t 1
-        fi
-    fi
-else
-    echo "Tmux is not installed. Skipping tmux session setup."
-fi
+## Check if tmux is installed
+#if command -v tmux &> /dev/null; then
+#    # Check if already in a tmux session
+#    if [ -n "$TMUX" ]; then
+#      true
+#    else
+#        # Search for a tmux session named '1'
+#        if tmux has-session -t 1 &> /dev/null; then
+#            # If session exists, attach to it
+#            tmux attach -t 1
+#        else
+#            # If session doesn't exist, create it and attach
+#            tmux new-session -s 1
+#        fi
+#    fi
+#else
+#    echo "Tmux is not installed. Skipping tmux session setup."
+#fi

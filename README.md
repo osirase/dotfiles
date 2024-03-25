@@ -1,16 +1,16 @@
 # Dotfiles
 My local dotfiles.
 
+## Prerequisite Software
+
+``` 
+sudo dnf -y install stow util-linux-user zsh vim ripgrep tmux fzf fd-find shellcheck pandoc emacs && chsh -s $(which zsh)
+```
+
 ## Installation
 
 ```
 git clone https://github.com/osirase/dotfiles.git $HOME/.config/dotfiles && stow -t $HOME -d $HOME/.config/dotfiles .
-```
-
-## Base Software
-
-``` 
-sudo dnf -y install stow zsh vim ripgrep tmux fzf fd-find shellcheck pandoc emacs && chsh -s $(which zsh)
 ```
 
 ## Doom Emacs

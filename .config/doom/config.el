@@ -4,7 +4,7 @@
 ;; sync' after modifying this file!
 
 ;; Custom landing page logo from here: https://github.com/zaiste/.doom.d
-(setq +doom-dashboard-banner-file (expand-file-name "logo.png" doom-private-dir))
+(setq +doom-dashboard-banner-file (expand-file-name "logo.png" doom-user-dir))
 
 ;; Projectile path for Spc p D
 (setq projectile-project-search-path '("~/git"))
@@ -47,6 +47,17 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+(blink-cursor-mode)
+
+(setq projectile-project-search-path '("~/git/" "~/org/"))
+
+(setq shell-file-name "/user/bin/zsh")
+
+(global-display-fill-column-indicator-mode)
+
+(setq default-frame-alist '((left . 0) (width . 90) (height . 65)))
+
+(scroll-bar-mode -1)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.

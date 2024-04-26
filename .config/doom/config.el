@@ -59,6 +59,15 @@
 
 (scroll-bar-mode -1)
 
+;; Insert the current date in the format: yyyy/MM/dd HH:mm:ss, MMMM.
+(defun insert-date-and-time ()
+  (interactive)
+  (insert (format-time-string "%Y/%m/%d $H:%M:%S, %B")))
+
+(map! :leader
+      :desc "insert date and time"
+      "i d" #'insert-date-and-time)
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;

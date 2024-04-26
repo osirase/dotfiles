@@ -51,7 +51,7 @@
 
 (setq projectile-project-search-path '("~/git/" "~/org/"))
 
-(setq shell-file-name "/user/bin/zsh")
+(setq shell-file-name "/usr/bin/zsh")
 
 (global-display-fill-column-indicator-mode)
 

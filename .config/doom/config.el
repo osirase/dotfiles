@@ -55,7 +55,7 @@
 
 (global-display-fill-column-indicator-mode)
 
-(setq default-frame-alist '((left . 0) (width . 90) (height . 65)))
+(setq default-frame-alist '((left . 0) (width . 90) (height . 55)))
 
 (scroll-bar-mode -1)
 

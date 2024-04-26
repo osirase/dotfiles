@@ -46,6 +46,18 @@ source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 
+export XDG_CONFIG_HOME=$HOME/.config
+export PATH="$HOME/.config/emacs/bin/:$PATH"
+
+# Disable wildcard expansion errors (no matches found) for better shell behaviour
+unsetopt NOMATCH
+
+# Enable Menu Selection for Tab Completion
+zstyle ':completion:*' menu select
+
+# Enable Menu Selection for SSH Hosts via ~/.ssh/known_hosts
+zstyle ':completion:*:hosts' menu select
+
 ## Check if tmux is installed
 #if command -v tmux &> /dev/null; then
 #    # Check if already in a tmux session

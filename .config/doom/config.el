@@ -68,6 +68,19 @@
       :desc "insert date and time"
       "i d" #'insert-date-and-time)
 
+(defun search-home ()
+  "Conduct a text search in files under `$HOME'"
+  (interactive)
+  (let ((default-directory (expand-file-name "~")))
+    (call-interactively
+     (cond ((modulep! :completion ivy)     #'+ivy/project-search-from-cwd)
+           ((modulep! :completion helm)    #'+helm/project-search-from-cwd)
+           ((modulep! :completion vertico) #'+vertico/project-search-from-cwd)
+           (#'rgrep)))))
+(map! :leader
+      :desc "Search home directory"
+      "s h" #'search-home)
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;

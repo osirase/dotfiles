@@ -25,8 +25,11 @@ setopt COMPLETE_IN_WORD
 ## history
 #setopt APPEND_HISTORY
 ## for sharing history between zsh processes
-#setopt INC_APPEND_HISTORY
 #setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST=1000
 
 ## never ever beep ever
 #setopt NO_BEEP

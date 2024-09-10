@@ -58,11 +58,19 @@ export PATH="$HOME/.config/emacs/bin/:$PATH"
 # Disable wildcard expansion errors (no matches found) for better shell behaviour
 unsetopt NOMATCH
 
+# Make Alt+Backspace or arrow keys move the same amount as bash
+autoload -U select-word-style
+select-word-style bash
+
 # Enable Menu Selection for Tab Completion
 zstyle ':completion:*' menu select
 
 # Enable Menu Selection for SSH Hosts via ~/.ssh/known_hosts
 zstyle ':completion:*:hosts' menu select
+
+# Enable case-insensitive completion
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 ## Check if tmux is installed
 #if command -v tmux &> /dev/null; then

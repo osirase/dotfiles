@@ -22,6 +22,9 @@ setopt COMPLETE_IN_WORD
 ## restart running processes on exit
 #setopt HUP
 
+## We like xdg
+export XDG_CONFIG_HOME=$HOME/.config
+
 ## history
 #setopt APPEND_HISTORY
 ## for sharing history between zsh processes

@@ -90,3 +90,9 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 #else
 #    echo "Tmux is not installed. Skipping tmux session setup."
 #fi
+
+# Only use zsh-autosuggestions if it's actually installed. It isn't in RHEL8.
+# Only available in the RHEL9 EPEL repo.
+if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi

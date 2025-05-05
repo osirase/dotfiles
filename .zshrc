@@ -45,12 +45,6 @@ SAVEHIST=1000
 
 # autoload -U colors
 #colors
-source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
-source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 
 export XDG_CONFIG_HOME=$HOME/.config
 export PATH="$HOME/.config/emacs/bin/:$PATH"
@@ -96,3 +90,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
   source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

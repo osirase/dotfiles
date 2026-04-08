@@ -34,6 +34,8 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=1000
 
+bindkey -e
+
 ## never ever beep ever
 #setopt NO_BEEP
 

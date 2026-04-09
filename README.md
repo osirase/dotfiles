@@ -10,7 +10,7 @@ sudo dnf -y install stow util-linux-user zsh vim ripgrep tmux fzf fd-find shellc
 ## Installation
 
 ```
-git clone https://github.com/osirase/dotfiles.git $HOME/.config/dotfiles && stow -t $HOME -d $HOME/.config/dotfiles .
+git clone git@github.com:osirase/dotfiles.git $HOME/.config/dotfiles && stow -t $HOME -d $HOME/.config/dotfiles .
 ```
 
 ## Doom Emacs
